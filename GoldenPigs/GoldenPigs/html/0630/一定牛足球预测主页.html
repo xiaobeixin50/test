@@ -1,0 +1,661 @@
+﻿
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>竞彩足球 - 一定牛彩票网</title>
+    <meta name="keywords" content="竞彩足球,竞猜足球,竞彩足球预测,竞彩足球技巧,竞彩足球资讯" />
+    <meta name="description" content="一定牛彩票网拥有一流的彩票分析团队,为广大彩民提供竞彩足球、竞彩足球胜平负的资讯、预测和技巧,足球竞猜就在一定牛,大奖等着您来取！" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+    <meta name="renderer" content="ie-comp" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/style/public.min.css?15063009" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.blockUI.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var cookieDomain = "ydniu.com";
+        var imgDomain = "http://img.ydniu.com";
+    </script>
+    <script src="/js/util.min.js?15063009" type="text/javascript"></script>
+
+    <link href="/style/news.min.css?15063009" rel="stylesheet" type="text/css" />
+    <script src="/js/news.min.js?15063009" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            ydniu.util.tab(".ct_menuhm_dj>span", ".ct_conul ul", "click", "cur", 0),
+            ydniu.pages.newsList(),
+            ydniu.lot.joinScheme(ydniu.pages.refreshScheme);
+        });
+    </script>
+
+    <title>
+
+    </title>
+</head>
+<body>
+    <div style="background-color: #ffffff">
+
+        <div id="header_top">
+            <div class="w1024">
+                <table id="top1" width="100%" class="tab">
+                    <tr>
+                        <td id="top1l">
+                            <span id="hyydn">欢迎来到一定牛彩票！</span><span id="unlogin" class="hide">
+                                <a id="alogin">登录</a><a style="margin-left: 46px;" href="/reg.aspx">免费注册</a>
+                            </span><span id="logined" class="hide">
+                                <a id="userName" class='blue2'></a><a id="awdzh" href='/user/account.aspx'>我的账户</a>|<a class="red" href='/user/charge.aspx'>充值</a>|<a href='/user/distill.aspx'>提款</a>|<a id="alogout" href='javascript:;'>退出</a>
+                            </span>
+                        </td>
+                        <td align="right">
+                            <a id="ajrsc" href="javascript:;">加入收藏</a>|<a target="_blank" href="/help/">帮助</a>
+                        </td>
+                    </tr>
+                </table>
+                <div id="tiplogin">
+                    <div>
+                        <div class="close">
+                            <span>X</span>
+                        </div>
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    <input id="name" type="text" value="用户名" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input id="pass" type="text" value="密码" />
+                                    <input id="pass2" type="password" value="" style="display: none;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <b id="blogin">登录</b>
+                                </td>
+                                <td align="right">
+                                    <a href="/user/forgetpwd.aspx">忘记密码</a>
+                                    <a href="/reg.aspx">免费注册</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="dcoper">
+                                        <label>合作登录：</label><a href="/partner/login.aspx?logintype=qq" class="alqq" target="_blank"></a><a href="/partner/login.aspx?logintype=alipay" class="alzfb" target="_blank"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="tipuinfo">
+                    <table>
+                        <tr>
+                            <td rowspan="4" width="74">
+                                <a href="/user/account.aspx"><img class="face" /></a>
+                            </td>
+                            <td width="36">
+                                称号：
+                            </td>
+                            <td id="level" width="90"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                战绩：
+                            </td>
+                            <td id="exploit" class="exploit"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                余额：
+                            </td>
+                            <td>
+                                <span id="balance" class="red"></span> 元
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                冻结：
+                            </td>
+                            <td>
+                                <span id="freeze" class="red"></span> 元
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                成长状态：
+                            </td>
+                            <td align="right">
+                                <a href="/user/level.aspx">详情</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div id="growns"><i></i></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                <span id="lvOpen"></span>
+                            </td>
+                            <td></td>
+                            <td align="right">
+                                <span id="lvNext"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <table class="w1024">
+            <tr>
+                <td>
+                    <a href="/" class="logo"></a><a href="http://chart.ydniu.com" class="lgatt" target="_blank"></a>
+                </td>
+                <td width="200">
+                    &nbsp;
+                </td>
+                <td width="85" align="right">
+                    <a target="_blank" href="/activity.aspx" class="activity"></a>
+                </td>
+                <td width="88" align="right">
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2765556163&amp;site=qq&amp;menu=yes" class="aqq"></a><br />
+                    <a href="javascript:;" class="azx"></a>
+                </td>
+            </tr>
+        </table>
+
+
+        <div id="header-bottom" class="hlotb">
+            <div class="w1024">
+                <table id="t_xzcz" class="tipmenu tiplot">
+                    <tr>
+                        <th>
+                            <i class='ijc'></i>
+                            <br />
+                            竞彩
+                        </th>
+                        <td>
+                            <a href='/lottery/jczq.aspx'>竞彩足球</a> <a href='/lottery/jclq.aspx'>竞彩篮球</a><br />
+                            <a href='/lottery/jczq.aspx?playid=7207'>二选一</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <i class='idc'></i>
+                            <br />
+                            单场
+                        </th>
+                        <td>
+                            <a href='/lottery/bjdc.aspx?playid=4501'>胜平负</a> <a href='/lottery/bjdc.aspx?playid=4504'>比分</a><br />
+                            <a href='/lottery/bjdc.aspx?playid=4505'>半全场</a> <a href='/lottery/bdsf.aspx'>胜负</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style='height:132px;'>
+                            <i class='igp'></i>
+                            <br />
+                            高频
+                        </th>
+                        <td>
+                            <a href='/lottery/k3js.aspx'>江苏快3</a><a href='/lottery/syx5sd.aspx'>11运夺金</a><br />
+                            <a href='/lottery/k3jl.aspx'>吉林快3</a><a href='/lottery/syx5jx.aspx'>江西11选5</a><br />
+                            <a href='/lottery/k3ah.aspx'>安徽快3</a><a href='/lottery/syx5sh.aspx'>上海11选5</a><br />
+                            <a href='/lottery/k3hb.aspx'>湖北快3</a><a href='/lottery/syx5gd.aspx'>广东11选5</a><br />
+                            <a href='/lottery/k3gx.aspx'>淘宝快3<i class='jiang'></i></a><a href='/lottery/kl12zj.aspx'>浙江快乐彩</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style='height:102px;'>
+                            福彩
+                            <br />
+                            体彩
+                        </th>
+                        <td>
+                            <a href='/lottery/ssq.aspx'>双色球</a> <a href='/lottery/dlt.aspx'>大乐透</a><br />
+                            <a href='/lottery/qlc.aspx'>七乐彩</a> <a href='/lottery/qxc.aspx'>七星彩</a><br />
+                            <a href='/lottery/sd.aspx'>3D</a> <a href='/lottery/pl5.aspx'>排五</a><br />
+                            <a href='/lottery/pl3.aspx'>排三</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <i class='izc'></i>
+                            <br />
+                            足彩
+                        </th>
+                        <td>
+                            <a href='/lottery/sfc.aspx'>14场胜负</a> <a href='/lottery/rjc.aspx'>任选9场</a><br />
+                            <a href='/lottery/bqc.aspx'>6场半全场</a> <a href='/lottery/jqc.aspx'>4场进球</a>
+                        </td>
+                    </tr>
+                </table>
+                <table id="t_cpzx" class="tipmenu">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="igpc"></i>
+                                <br />
+                                高频彩
+                            </th>
+                            <td>
+                                <a target="_blank" href="/info/k3js/">江苏快3</a><a target="_blank" href="/info/k3jl/">吉林快3</a><a target="_blank" href="/info/k3ah/">安徽快3</a><a target="_blank" href="/info/k3hb/">湖北快3</a><a target="_blank" href="/info/k3gx/">淘宝快3</a><br />
+                                <a target="_blank" href="/info/syx5sd/">11运夺金</a><a href="/info/syx5jx/">江西11选5</a><a target="_blank" href="/info/syx5sh/">上海11选5</a><a target="_blank" href="/info/syx5gd/">广东11选5</a><a target="_blank" href="/info/kl12zj/">浙江快乐彩</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i class="issc"></i>
+                                <br />
+                                数字彩
+                            </th>
+                            <td class="font_lj2">
+                                <a target="_blank" href="/info/ssq/">双色球</a><a target="_blank" href="/info/dlt/">大乐透</a><a target="_blank" href="/info/sd/">福彩3D</a><a target="_blank" href="/info/pl3/">排列3</a><a target="_blank" href="/info/pl5/">排列5</a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>
+                            <i class="ijjc"></i>
+                            <br />
+                            竞技彩
+                        </th>
+                        <td class="font_lj2">
+                            <a target="_blank" href="/info/jczq/">竞彩足球</a><a target="_blank" href="/info/jclq/">竞彩蓝球</a><a target="_blank" href="/info/bjdc/">北京单场 </a>
+                            <a target="_blank" href="/info/sfc/">胜负彩</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bottom">
+                            <a target="_blank" href="/info/">更多彩票资讯&gt;&gt;</a>
+                        </td>
+                    </tr>
+                </table>
+                <table id="t_zstb" class="tipmenu">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="igpc"></i>
+                                <br />
+                                高频彩
+                            </th>
+                            <td>
+                                <a target="_blank" href="http://chart.ydniu.com/trend/k3js/">江苏快3</a><a target="_blank" href="http://chart.ydniu.com/trend/k3jl/">吉林快3</a><a target="_blank" href="http://chart.ydniu.com/trend/k3ah/">安徽快3</a><a target="_blank" href="http://chart.ydniu.com/trend/k3hb/">湖北快3</a><a target="_blank" href="http://chart.ydniu.com/trend/k3gx/">淘宝快3</a><br />
+                                <a target="_blank" href="http://chart.ydniu.com/trend/syx5sd/">11运夺金</a><a target="_blank" href="http://chart.ydniu.com/trend/syx5jx/">江西11选5</a><a target="_blank" href="http://chart.ydniu.com/trend/syx5sh/">上海11选5</a><a target="_blank" href="http://chart.ydniu.com/trend/syx5gd/">广东11选5</a><a target="_blank" href="http://chart.ydniu.com/trend/kl12zj/">浙江快乐彩</a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>
+                            <i class="issc"></i>
+                            <br />
+                            数字彩
+                        </th>
+                        <td class="font_lj2">
+                            <a target="_blank" href="http://chart.ydniu.com/trend/ssq/">双色球</a><a target="_blank" href="http://chart.ydniu.com/trend/sd/">3D</a><a target="_blank" href="http://chart.ydniu.com/trend/qlc/">七乐彩</a><br />
+                            <a target="_blank" href="http://chart.ydniu.com/trend/dlt/">大乐透</a><a target="_blank" href="http://chart.ydniu.com/trend/pl3/">排列3</a><a target="_blank" href="http://chart.ydniu.com/trend/pl5/">排列5</a><a target="_blank" href="http://chart.ydniu.com/trend/qxc/">七星彩</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bottom">
+                            <a target="_blank" href="http://chart.ydniu.com" style="width: auto; margin-right: 3px;">
+                                更多走势图表&gt;&gt;
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table id="t_yltb" class="tipmenu">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="igpc"></i>
+                                <br />
+                                高频彩
+                            </th>
+                            <td>
+                                <a target="_blank" href="http://chart.ydniu.com/miss/k3js/">江苏快3</a><a target="_blank" href="http://chart.ydniu.com/miss/k3jl/">吉林快3</a><a target="_blank" href="http://chart.ydniu.com/miss/k3ah/">安徽快3</a><a target="_blank" href="http://chart.ydniu.com/miss/k3hb/">湖北快3</a><a target="_blank" href="http://chart.ydniu.com/miss/k3gx/">淘宝快3</a><br />
+                                <a target="_blank" href="http://chart.ydniu.com/miss/syx5sd/">11运夺金</a><a target="_blank" href="http://chart.ydniu.com/miss/syx5jx/">江西11选5</a><a target="_blank" href="http://chart.ydniu.com/miss/syx5sh/">上海11选5</a><a target="_blank" href="http://chart.ydniu.com/miss/syx5gd/">广东11选5</a><a target="_blank" href="http://chart.ydniu.com/miss/kl12zj/">浙江快乐彩</a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>
+                            <i class="issc"></i>
+                            <br />
+                            数字彩
+                        </th>
+                        <td class="font_lj2">
+                            <a target="_blank" href="http://chart.ydniu.com/miss/ssq/">双色球</a><a target="_blank" href="http://chart.ydniu.com/miss/sd/">3D</a><a target="_blank" href="http://chart.ydniu.com/miss/qlc/">七乐彩</a><br />
+                            <a target="_blank" href="http://chart.ydniu.com/miss/dlt/">大乐透</a><a target="_blank" href="http://chart.ydniu.com/miss/pl3/">排列3</a><a target="_blank" href="http://chart.ydniu.com/miss/pl5/">排列5</a><a target="_blank" href="http://chart.ydniu.com/miss/qxc/">七星彩</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bottom">
+                            <a target="_blank" href="http://chart.ydniu.com" style="width: auto; margin-right: 3px;">
+                                更多遗漏数据&gt;&gt;
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table id="t_kjgg" class="tipmenu">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="igpc"></i>
+                                <br />
+                                高频彩
+                            </th>
+                            <td>
+                                <a target="_blank" href="/open/86.html">江苏快3</a><a target="_blank" href="/open/84.html">吉林快3</a><a target="_blank" href="/open/85.html">安徽快3</a><a target="_blank" href="/open/90.html">湖北快3</a><a target="_blank" href="/open/89.html">淘宝快3</a><br />
+                                <a target="_blank" href="/open/62.html">11运夺金</a><a href="/open/70.html">江西11选5</a><a target="_blank" href="/open/87.html">上海11选5</a><a target="_blank" href="/open/78.html">广东11选5</a><a target="_blank" href="/open/88.html">浙江快乐彩</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i class="issc"></i>
+                                <br />
+                                数字彩
+                            </th>
+                            <td class="font_lj2">
+                                <a target="_blank" href="/open/ssq.aspx">双色球</a><a target="_blank" href="/open/dlt.aspx">大乐透</a><a target="_blank" href="/open/sd.aspx">福彩3D</a><a target="_blank" href="/open/pl3.aspx">排列3</a><a target="_blank" href="/open/pl5.aspx">排列5</a><br />
+                                <a target="_blank" href="/open/qlc.aspx">七乐彩</a><a target="_blank" href="/open/qxc.aspx">七星彩</a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>
+                            <i class="ijjc"></i>
+                            <br />
+                            竞技彩
+                        </th>
+                        <td class="font_lj2">
+                            <a target="_blank" href="/open/jczq.aspx">竞彩足球</a><a target="_blank" href="/open/jclq.aspx">竞彩蓝球</a><a target="_blank" href="/open/zcdc.aspx">单场足球 </a>
+                            <a target="_blank" href="/open/bdsf.aspx">胜负彩</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bottom">
+                            <a target="_blank" href="/open/" style="width: auto; margin-right: 3px;">更多开奖公告&gt;&gt;</a>
+                        </td>
+                    </tr>
+                </table>
+                <table id="t_bfzb" class="tipmenu">
+                    <tr>
+                        <td>
+                            <a target="_blank" href="/live/score.aspx?id=72">竞彩足球</a>
+                            <a target="_blank" href="/live/score.aspx?id=73">竞彩篮球</a>
+                            <br />
+                            <a target="_blank" href="/live/score.aspx?id=45">北京单场</a>
+                            <a target="_blank" href="/live/score.aspx?id=93">北单胜负</a>
+                            <br />
+                            <a target="_blank" href="/live/score.aspx?id=74">胜负彩</a>
+                            <a target="_blank" href="/live/score.aspx?id=15">六场半全场</a>
+                            <a target="_blank" href="/live/score.aspx?id=2">四场进球</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="w1024">
+                <table id="hbnav" align="left">
+                    <tr>
+                        <td width="232">
+                            <b id="b_xzcz"><i class="idown"></i><span>选择彩种</span></b>
+                        </td>
+                        <td id="tdsy">
+                            <a href="/">首页</a>
+                        </td>
+                        <td width="95">
+                            <a href="/info/" id="a_cpzx"><span>彩票资讯</span><i class='idown3'></i></a>
+                        </td>
+                        <td width="79">
+                            <a href="/lottery/join.aspx">合买大厅</a>
+                        </td>
+                        <td width="95">
+                            <a target="_blank" href="http://chart.ydniu.com/trend/k3js/" id="a_zstb"><span>走势图表</span><i class='idown3'></i></a>
+                        </td>
+                        <td width="95">
+                            <a target="_blank" href="http://chart.ydniu.com/miss/k3js/" id="a_yltb"><span>遗漏数据</span><i class='idown3'></i></a>
+                        </td>
+                        <td width="95">
+                            <a href="/open/" id="a_kjgg"><span>开奖公告</span><i class='idown3'></i></a>
+                        </td>
+                        <td width="95">
+                            <a href="/live/score.aspx" id="a_bfzb"><span>比分直播</span><i class='idown3'></i></a>
+                        </td>
+                        <td width="79">
+                            <a href="http://info.ydniu.com" target="_blank">足球资料</a>
+                        </td>
+                        <td width="79">
+                            <a href="/app.aspx">手机购彩</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="divMain" class="w1024">
+
+        <div class="news">
+
+            <div class="zx_direct">您现在的位置：<a href="/">一定牛彩票网</a>&nbsp;>&nbsp;<a href="/info/">彩票资讯</a><span>&nbsp;>&nbsp;竞彩足球</span></div>
+
+            <h2 class="nav_first">
+                <a href="/info/" class="zx_navcur">资讯首页</a><span class="title">竞技</span><a href="/info/bjdc/">北单</a><a href="/info/jczq/" class="zx_navcur">竞足</a><a href="/info/jclq/">竞篮</a><a href="/info/sfc/">胜负彩</a><span class="title">高频</span><div class="nav_menu"><a href="/info/k3js/">江苏快3<i></i></a><em><a href="/info/k3jl/">吉林快3</a><a href="/info/k3ah/">安徽快3</a><a href="/info/k3js/">江苏快3</a><a href="/info/k3gx/">广西快3</a><a href="/info/k3hb/">湖北快3</a><a href="/info/k3gz/">贵州快3</a><a href="/info/k3sh/">上海快3</a><a href="/info/k3fj/">福建快3</a><a href="/info/k3heb/">河北快3</a><a href="/info/k3nmg/">内蒙古快3</a><a href="/info/k3qh/">青海快3</a><a href="/info/k3hen/">河南快3</a><a href="/info/k3bj/">北京快3</a></em></div><div class="nav_menu"><a href="/info/syx5sd/">11运夺金<i></i></a><em><a href="/info/syx5sd/">11运夺金</a><a href="/info/syx5jx/">江西11选5</a><a href="/info/syx5gd/">广东11选5</a><a href="/info/syx5sh/">上海11选5</a><a href="/info/syx5yn/">云南11选5</a><a href="/info/syx5js/">江苏11选5</a><a href="/info/syx5ah/">安徽11选5</a><a href="/info/syx5gz/">贵州11选5</a><a href="/info/syx5hub/">湖北11选5</a><a href="/info/syx5jl/">吉林11选5</a><a href="/info/syx5ln/">辽宁11选5</a><a href="/info/syx5jin/">山西11选5</a><a href="/info/syx5hlj/">黑龙江11选5</a><a href="/info/syx5sc/">四川11选5</a><a href="/info/syx5fj/">福建11选5</a><a href="/info/syx5nm/">内蒙古11选5</a><a href="/info/syx5hen/">河南11选5</a><a href="/info/syx5gx/">广西11选5</a><a href="/info/syx5tj/">天津11选5</a><a href="/info/syx5gs/">甘肃11选5</a><a href="/info/syx5xj/">新疆11选5</a><a href="/info/syx5zj/">浙江11选5</a><a href="/info/syx5nx/">宁夏11选5</a><a href="/info/syx5qh/">青海11选5</a><a href="/info/syx5shan/">陕西11选5</a><a href="/info/syx5xz/">西藏11选5</a><a href="/info/syx5heb/">河北11选5</a><a href="/info/syx5cq/">重庆11选5</a></em></div><div class="nav_menu"><a href="/info/kl12zj/">浙江快乐彩<i></i></a><em><a href="/info/kl12zj/">快乐彩</a><a href="/info/kl12ln/">辽宁快乐12</a><a href="/info/kl12sc/">四川快乐12</a></em></div><label><span class="title">数字</span><a href="/info/ssq/">双色球</a><a href="/info/dlt/">大乐透</a><a href="/info/sd/">福彩3D</a><a href="/info/pl3/">排三</a><div class="nav_menu"><a href="javascript:;">更多</a><em><a href="/info/pl5/">排列五</a><a href="/info/qlc/">七乐彩</a><a href="/info/qxc/">七星彩</a></em></div></label>
+            </h2>
+
+            <h4 class="zx_wdbh"><a href="javascript:;"></a><span><a href="/info/wzgg/">网站公告</a><a href="/info/zjxw/">中奖新闻</a><a href="/info/skill.aspx">技巧专栏</a></span></h4>
+            <div class="zx_k311x5con">
+                <div class="zx_k311x5_left">
+                    <div class="newstype">
+                        <h1>竞彩足球</h1><span>
+                            <a href="/info/jczq/cpzx/">彩票资讯</a>
+                            <a href="/info/jczq/zjxw/">中奖新闻</a>
+                            <a href="/info/jczq/cpyc/">彩票预测</a>
+                            <a href="/info/jczq/cpjq/">彩票技巧</a>
+                            <a href="/help/wfjs/jczq.aspx" target='_blank'>玩法介绍</a>
+
+                        </span>
+                    </div>
+                    <ul class="zx_list">
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/68008.html" target='_blank'>周三05巴甲 帕尔拉斯VS沙佩科推荐分析</a></div>
+                            <p>　　&nbsp;&nbsp;&nbsp;&nbsp;帕尔拉斯VS沙佩科　　亚盘：2.02&nbsp; 一球&nbsp;1.83　　欧赔：1.51&nbsp; 3.69&nbsp;6.44↓　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.44&nbsp;&nbsp; 3.90&nbsp;7....<a href="/info/jczq/cpyc/68008.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 17:38</p>
+                            <div class="fa_fx"><p>浏览：510次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/68000.html" target='_blank'>周三02巴甲 瓦斯科达伽马VS奥瓦推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 瓦斯科达伽马VS奥瓦　　亚盘：1.83&nbsp; 半球&nbsp;2.02&nbsp;&nbsp;&nbsp;&nbsp; 欧赔：1.83&nbsp;&nbsp; 3.27&nbsp;4.28↑&nbsp;&nbsp;　&nbsp;&nbsp;&nbsp...<a href="/info/jczq/cpyc/68000.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 17:19</p>
+                            <div class="fa_fx"><p>浏览：510次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67980.html" target='_blank'>周三01巴甲 累西腓体育VS巴西国际推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;累西腓体育VS巴西国际　　亚盘：1.88&nbsp;&nbsp; 平手/半球&nbsp;&nbsp; 1.98↑&nbsp;&nbsp;&nbsp;&nbsp; 欧赔：2.21&nbsp;&nbsp; 3.15&nbsp;&nbsp; 3.15&nbsp...<a href="/info/jczq/cpyc/67980.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 16:57</p>
+                            <div class="fa_fx"><p>浏览：518次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67977.html" target='_blank'>周三04美公开 纽约红牛VS纽约宇宙队推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 纽约红牛VS纽约宇宙队　　亚盘：1.90&nbsp; 一球&nbsp; 1.90&nbsp;&nbsp;&nbsp;&nbsp; 欧赔：1.51&nbsp; 3.99&nbsp; 5.29↓&nbsp;　&nbsp;&nbsp;&nbsp;&...<a href="/info/jczq/cpyc/67977.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 16:44</p>
+                            <div class="fa_fx"><p>浏览：520次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票资讯】</span><a href="/info/jczq/cpzx/67974.html" target='_blank'>2015-16赛季德甲赛程公布：拜仁揭幕战迎汉堡</a></div>
+                            <p>　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;德甲官网公布了2015-16赛季的赛程安排，新赛季的德甲联赛将在8月14日揭幕，明年5月14日落下大幕，拜仁将在揭幕战主场对阵汉堡，而多特蒙德则主场对阵门兴，...<a href="/info/jczq/cpzx/67974.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 16:25</p>
+                            <div class="fa_fx"><p>浏览：11次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67973.html" target='_blank'>周三03女足世界杯 日本女足VS英格兰推荐分析</a></div>
+                            <p>　　&nbsp;&nbsp;&nbsp; 日本女足VS英格兰　　亚盘：2.02&nbsp;&nbsp; 半球&nbsp;&nbsp; 1.74↑&nbsp;&nbsp;&nbsp;&nbsp; 欧赔：2.04&nbsp; 3.12↓&nbsp;&nbsp; 3.72&nbsp;　&nbsp;&nbsp;&nbsp;...<a href="/info/jczq/cpyc/67973.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 16:19</p>
+                            <div class="fa_fx"><p>浏览：533次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67955.html" target='_blank'>周二05美公开 奥兰多城VS哥伦布机员推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 奥兰多城VS哥伦布机员　　亚盘：1.88&nbsp; 平手/半球&nbsp;&nbsp; 1.93&nbsp;&nbsp;&nbsp; 欧赔：2.14&nbsp;&nbsp; 3.24&nbsp;3.05&nbsp;&nbsp;&nbsp;&...<a href="/info/jczq/cpyc/67955.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 14:58</p>
+                            <div class="fa_fx"><p>浏览：585次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67950.html" target='_blank'>周二03美公开 费城联合VS华盛顿联队推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 费城联合VS华盛顿联队　　亚盘：2.02&nbsp; 半球&nbsp; 1.77&nbsp;&nbsp;&nbsp; 欧赔：1.97&nbsp; 3.27&nbsp; 3.44↑&nbsp;&nbsp;&nbsp;&nbsp;　&nbsp;&...<a href="/info/jczq/cpyc/67950.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 14:37</p>
+                            <div class="fa_fx"><p>浏览：592次</p></div>
+                        </li>
+                        <li>
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67937.html" target='_blank'>周二01欧青赛 瑞典U21VS葡萄牙U21推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 瑞典U21VS葡萄牙U21　　亚盘：1.79&nbsp;&nbsp; 受半球/一球&nbsp;&nbsp; 1.96↑&nbsp;&nbsp;&nbsp; 欧赔：4.73&nbsp; 3.47↓&nbsp; 1.74&nbsp;&nbsp;&n...<a href="/info/jczq/cpyc/67937.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 14:21</p>
+                            <div class="fa_fx"><p>浏览：607次</p></div>
+                        </li>
+                        <li class="ct_last">
+                            <div><span>【彩票预测】</span><a href="/info/jczq/cpyc/67932.html" target='_blank'>周二02女足世界杯 美国女足VS德国女足推荐分析</a></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;美国女足VS德国女足　　亚盘：1.98&nbsp; 平手&nbsp;1.77&nbsp;&nbsp;&nbsp; 欧赔：2.82&nbsp;&nbsp; 3.10&nbsp;2.46↑&nbsp;&nbsp;　&nbsp;&nbsp;&nbsp;...<a href="/info/jczq/cpyc/67932.html" target='_blank'>[详细]</a></p>
+                            <p>发布时间：2015-06-30 14:07</p>
+                            <div class="fa_fx"><p>浏览：624次</p></div>
+                        </li>
+
+                    </ul>
+                    <div class="pages">
+                        <div class="pageli">
+                            <a href="javascript:;" class="prev">上一页</a>
+                            <a href="javascript:;" class="cur">1</a>
+                            <a href="/info/jczq/2/" val='2'>2</a>
+                            <a href="/info/jczq/3/" val='3'>3</a>
+                            ...
+                            <a href="/info/jczq/1146/" val='1146'>1146</a>
+                            <a href="/info/jczq/2/" class="prev" val='2'>下一页</a>
+                            <input type="text" value="1" max='1146'>
+                            <a href="javascript:;" class="go" lotid='72' typeid='0' lotcode='jczq' typecode=''>GO</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="zx_k311x5_right zx_jjright">
+                    <h4>玩法入口</h4>
+                    <div class="zx_rk">
+                        <a href="/lottery/bjdc.aspx" target="_blank"><span class="zx_bd"></span>北京单场</a>
+                        <a href="/lottery/bdsf.aspx" target="_blank"><span class="zx_bs"></span>北单胜负</a>
+                    </div>
+                    <h4>足球数据</h4>
+                    <div class="zx_zl">
+                        <a href="http://info.ydniu.com/league.aspx?matchtypeid=36" target="_blank"><span><em class="zx_yc"></em></span>英超</a>
+                        <a href="http://info.ydniu.com/league.aspx?matchtypeid=34" target="_blank"><span><em class="zx_yj"></em></span>意甲</a>
+                        <a href="http://info.ydniu.com/league.aspx?matchtypeid=31" target="_blank"><span><em class="zx_xj"></em></span>西甲</a>
+                        <a href="http://info.ydniu.com/leaguesub.aspx?matchtypeid=37" target="_blank"><span><em class="zx_yg"></em></span>英冠</a>
+                        <a href="http://info.ydniu.com/league.aspx?matchtypeid=8" target="_blank"><span><em class="zx_dj"></em></span>德甲</a>
+                        <a href="http://info.ydniu.com/league.aspx?matchtypeid=11" target="_blank"><span><em class="zx_fj"></em></span>法甲</a>
+                        <a href="http://info.ydniu.com/league.aspx?matchtypeid=23" target="_blank"><span><em class="zx_pc"></em></span>葡超</a>
+                        <a href="http://info.ydniu.com/cupmatch.aspx?matchtypeid=67" target="_blank"><span><em class="zx_oz"></em></span>欧洲杯</a>
+                    </div>
+                    <h6 class="ct_menuhm_dj"><span class="cur">热门合买</span><span>最新中奖</span></h6>
+                    <div class="ct_conul">
+                        <ul class="ct_rmhm"></ul>
+                        <ul class="ct_djph" style="display: none;"></ul>
+                    </div>
+
+                    <h4>竞彩足球技巧</h4>
+                    <div class="zx_tj">
+                        <span><a href="/info/jczq/cpjq/66872.html" target='_blank' title='竞彩投注技巧：战绩看走势  伤停战意可参考'><em></em>竞彩投注技巧：战绩看走势  伤停战意可</a></span>
+                        <span><a href="/info/jczq/cpjq/33767.html" target='_blank' title='尼斯vs波尔多预测分析 周六65法甲'><em></em>尼斯vs波尔多预测分析 周六65法甲</a></span>
+                        <span><a href="/info/jczq/cpjq/16191.html" target='_blank' title='足彩理财新思路 你也可以赢利'><em></em>足彩理财新思路 你也可以赢利</a></span>
+                        <span><a href="/info/jczq/cpjq/13398.html" target='_blank' title='总进球投注技巧:胜负并非关键'><em></em>总进球投注技巧:胜负并非关键</a></span>
+
+                    </div>
+
+                    <div class="zx_2w">
+                        <div class="weixi"></div>
+                        <div style="float: left; width: 149px;">
+                            <h6>一定牛官方微信</h6>
+                            <p>关注一定牛彩票官方微信洞悉最新优惠资讯和购彩秘籍！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="c"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="w1024">
+            <div class="footas">
+                <a href="/about.aspx">关于我们</a>|<a href="/sitemap.aspx">网站地图</a>|<a href="/about.aspx?page=contact">联系我们</a>|<a href="/about.aspx?page=partners">合作伙伴</a>|<a href="/user/suggest.aspx">意见反馈</a>
+            </div>
+            <div class="c666 mt5">
+                Copyright C 2002-2014 一定牛彩票网 All rights reserved.
+                &nbsp;<span class="c333">客服热线：<b>400-080-3335</b></span>
+                &nbsp;<a href="javascript:;" id="azx">在线客服</a>
+                &nbsp;一定牛彩票提醒：
+                <span class="c333">彩票有风险，投注需谨慎</span>
+                不向未满18周岁的青少年出售彩票！<br />
+                版权所有：一定牛彩票网 | 增值电信业务经营许可证： 粤B2-20110650 | 备案：粤ICP 备10211535号
+            </div>
+        </div>
+        <div class="accredit">
+            <a class="a001" href="http://net.china.cn/chinese/" target="_blank" rel="nofollow">
+            </a><a class="a002" href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">
+            </a><a class="a003" href="http://www.zhcw.com" target="_blank" rel="nofollow"></a>
+            <a class="a004" href="http://www.lottery.gov.cn" target="_blank" rel="nofollow">
+            </a><a class="a005" title="网上交易保证中心" href="http://www.315online.com.cn/member/315120039.html"
+                   target="_blank" rel="nofollow"></a><a class="a006" href="http://www.ectrustprc.org.cn/certificate.id/certificateb.php?id=20088708"
+                                                         target="_blank" rel="nofollow"></a><a class="a007" id="urlknet" tabindex="-1" href="https://kxlogo.knet.cn/verifyseal.dll?sn=e12082244030035011000000&amp;pa=294005"
+                                                                                               target="_blank" rel="nofollow"></a><a class="a008" rel="nofollow" href="http://www.anquan.org/authenticate/cert/?site=www.ydniu.com&at=realname"
+                                                                                                                                     target="_blank" rel="nofollow"></a>
+        </div>
+
+    </div>
+
+    <div class="zx_yh w1024">
+        <a target="_blank" href="http://chart.ydniu.com/trend/ssq/">双色球走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/dlt/">大乐透走势图</a>|<a target="_blank" href="/open/pl3sjh.html">
+            排列三试机号
+        </a>|<a target="_blank" href="http://chart.ydniu.com/trend/qxc/">七星彩走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/syx5js/">江苏11选5走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/k3js/">江苏快3走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/k3jl/">吉林快3走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/k3hb/">
+            湖北快3走势图
+        </a>|<a target="_blank" href="http://chart.ydniu.com/trend/k3heb/">河北快3走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/kl12sc/">快乐12走势图</a><a href="javascript:" id="moreLink">更多</a>
+        <a href="/info/sd/cpyc/" target="_blank">3D预测</a>|<a target="_blank" href="http://chart.ydniu.com/trend/syx5sd/">十一运夺金走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/kl12zj/">浙江快乐彩走势图</a>
+        |<a href="/open/ssq.aspx" target="_blank">双色球开奖结果</a>|<a href="http://chart.ydniu.com/trend/syx5gd/" target="_blank">广东11选走势图</a>
+        |<a href="/open/sd.aspx" target="_blank">3d开奖结果</a>|<a href="/open/dlt.aspx" target="_blank">大乐透开奖结果</a>
+        |<a href="/open/qxc.aspx" target="_blank">七星彩开奖结果</a>|<a href="/open/126.html" target="_blank">重庆时时彩开奖结果</a>|<a href="/open/86.html" target="_blank">江苏快3开奖</a>
+        |<a href="http://chart.ydniu.com/trend/sd/" target="_blank">3d走势图</a>|<a href="/info/ssq/cpyc/" target="_blank">双色球预测</a>|<a href="/info/dlt/cpyc/" target="_blank">大乐透预测</a>
+        |<a href="/open/sdsjh.html" target="_blank">3d试机号</a>|<a href="/info/jczq/cpyc/" target="_blank">竞彩足球推荐</a>|<a target="_blank" href="http://chart.ydniu.com/miss/syx5sd/">山东11选5遗漏</a>|<a target="_blank" href="http://chart.ydniu.com/miss/syx5gd/">广东11选5遗漏</a>|<a target="_blank" href="http://chart.ydniu.com/miss/k3js/">江苏快3遗漏</a>|<a target="_blank" href="/help/wfjs/ssq.aspx#c">
+            双色球中奖规则
+        </a>|<a target="_blank" href="/help/wfjs/sd.aspx#c">3d中奖规则</a>|<a target="_blank" href="/help/wfjs/dlt.aspx#c">大乐透中奖规则</a>|<a target="_blank" href="/open/88.html">快乐彩开奖结果</a>|<a target="_blank" href="http://chart.ydniu.com/miss/k3jl/">吉林快3遗漏</a>|<a href="/info/kl12zj/cpjq/" target="_blank">快乐彩技巧</a>
+        |<a target="_blank" href="http://chart.ydniu.com/trend/syx5zj/">浙江11选5走势图</a>|<a target="_blank" href="http://chart.ydniu.com/trend/k3fj/">福建快3走势图</a>
+        |<a target="_blank" href="/lottery/syx5js.aspx">江苏11选5</a>|<a target="_blank" href="/lottery/syx5zj.aspx">浙江11选5</a>
+        |<a target="_blank" href="/lottery/kl12ln.aspx">辽宁快乐12</a>|<a target="_blank" href="/lottery/kl12sc.aspx">四川快乐12</a>
+        |<a target="_blank" href="/lottery/k3heb.aspx">河北快3</a>|<a target="_blank" href="/lottery/k3fj.aspx">福建快3</a>
+        |<a target="_blank" href="/lottery/k3hen.aspx">河南快3</a>
+    </div>
+
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6621275"></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        bindLoginUser();
+        bindNavStatus();
+        $(document).ready(function () {
+            try {
+                //百度分享
+                document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+                //live800
+                var html = "<a class='zaixie' href=\"javascript:;\" onclick=\"try{parent.closeMini();}catch(e){;}this.newWindow = window.open('http://chat56.live800.com/live800/chatClient/chatbox.jsp?companyID=267273&configID=68051&jid=1693281166', 'chatbox267273', 'toolbar=0');this.newWindow.focus();this.newWindow.opener=window;return false;\"></a>";
+                $("#headlive800").html(html);
+            } catch (e) {
+            }
+            bindStatCode();
+        });
+    </script>
+</body>
+</html>

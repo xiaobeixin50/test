@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4520FA7-6B5D-42ED-BE30-47883115DFA4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoldenPigs</RootNamespace>
+    <AssemblyName>GoldenPigs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>thirdparty\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.8.3\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>thirdparty\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Json">
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v3.0\Libraries\Client\System.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0630\ActualBuyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\ActualBuyForm.Designer.cs">
+      <DependentUpon>ActualBuyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\BackTestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\BackTestingForm.Designer.cs">
+      <DependentUpon>BackTestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\DataAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\DataAnalysisForm.Designer.cs">
+      <DependentUpon>DataAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\DataPeilvAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\DataPeilvAnalysisForm.Designer.cs">
+      <DependentUpon>DataPeilvAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\DataStaticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\DataStaticsForm.Designer.cs">
+      <DependentUpon>DataStaticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\DataVisualizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\DataVisualizationForm.Designer.cs">
+      <DependentUpon>DataVisualizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\MainControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\MainControlForm.Designer.cs">
+      <DependentUpon>MainControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\MatchSuggestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\MatchSuggestForm.Designer.cs">
+      <DependentUpon>MatchSuggestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0630\TouzhuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0630\TouzhuForm.Designer.cs">
+      <DependentUpon>TouzhuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1211\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1211\ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbountForm.Designer.cs">
+      <DependentUpon>AbountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountStaticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountStaticsForm.Designer.cs">
+      <DependentUpon>AccountStaticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppYuceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppYuceForm.Designer.cs">
+      <DependentUpon>AppYuceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaketBallYuce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaketBallYuce.Designer.cs">
+      <DependentUpon>BaketBallYuce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\myDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\AppYuceDAL.cs" />
+    <Compile Include="DAL\BasketResultDAL.cs" />
+    <Compile Include="DAL\BasketRqResultDAL.cs" />
+    <Compile Include="DAL\BasketYuceDAL.cs" />
+    <Compile Include="DAL\BifaTop3DAL.cs" />
+    <Compile Include="DAL\IncomeDAL.cs" />
+    <Compile Include="DAL\JifenbangDAL.cs" />
+    <Compile Include="DAL\KaijiangDAL.cs" />
+    <Compile Include="DAL\KaijiangStatsDAL.cs" />
+    <Compile Include="DAL\PeilvDAL.cs" />
+    <Compile Include="DAL\SoccerSingleDAL.cs" />
+    <Compile Include="DAL\StrategyDAL.cs" />
+    <Compile Include="DAL\SuperBifaDAL.cs" />
+    <Compile Include="DAL\TaocanDAL.cs" />
+    <Compile Include="DAL\TaocanDetailDAL.cs" />
+    <Compile Include="DAL\TaocanVoteDAL.cs" />
+    <Compile Include="DAL\TouzhuSpfDAL.cs" />
+    <Compile Include="DAL\TouzhuTaocanDAL.cs" />
+    <Compile Include="DAL\XinshuiDAL.cs" />
+    <Compile Include="DAL\YuceLanqiuDAL.cs" />
+    <Compile Include="DAL\YucerawdataDAL.cs" />
+    <Compile Include="DanChangAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanChangAnalysis.Designer.cs">
+      <DependentUpon>DanChangAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanchangCelveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanchangCelveForm.Designer.cs">
+      <DependentUpon>DanchangCelveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanchangTouzhuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanchangTouzhuForm.Designer.cs">
+      <DependentUpon>DanchangTouzhuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysisForm.Designer.cs">
+      <DependentUpon>DataAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataValidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataValidateForm.Designer.cs">
+      <DependentUpon>DataValidateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\AnalysisResult.cs" />
+    <Compile Include="Entity\AppYuce.cs" />
+    <Compile Include="Entity\AppYuceBadUrl.cs" />
+    <Compile Include="Entity\BasketResult.cs" />
+    <Compile Include="Entity\BasketRqResult.cs" />
+    <Compile Include="Entity\BasketYuce.cs" />
+    <Compile Include="Entity\BifaTop3.cs" />
+    <Compile Include="Entity\DailyShouyi.cs" />
+    <Compile Include="Entity\DataPeilvAnalysis.cs" />
+    <Compile Include="Entity\Income.cs" />
+    <Compile Include="Entity\Jifenbang.cs" />
+    <Compile Include="Entity\JsonObject\BifaJsonEntity.cs" />
+    <Compile Include="Entity\JsonObject\BifaSubJsonEntity.cs" />
+    <Compile Include="Entity\JsonObject\DanchangHistory.cs" />
+    <Compile Include="Entity\JsonObject\LancaiJsonEntity.cs" />
+    <Compile Include="Entity\JsonObject\LancaiSubJsonEntity.cs" />
+    <Compile Include="Entity\JsonObject\Race.cs" />
+    <Compile Include="Entity\Kaijiang.cs" />
+    <Compile Include="Entity\KaijiangStats.cs" />
+    <Compile Include="Entity\Match.cs" />
+    <Compile Include="Entity\MatchShouyi.cs" />
+    <Compile Include="Entity\Peilv.cs" />
+    <Compile Include="Entity\PeilvAnalysis.cs" />
+    <Compile Include="Entity\SelectedTouzhu.cs" />
+    <Compile Include="Entity\SingleAnalysisiResult.cs" />
+    <Compile Include="Entity\SoccerSingle.cs" />
+    <Compile Include="Entity\SoccerSingleAnalysis.cs" />
+    <Compile Include="Entity\SuperBifa.cs" />
+    <Compile Include="Entity\Taocan.cs" />
+    <Compile Include="Entity\TaocanDetail.cs" />
+    <Compile Include="Entity\TouzhuSpf.cs" />
+    <Compile Include="Entity\TouzhuTaocan.cs" />
+    <Compile Include="Entity\Tuijian.cs" />
+    <Compile Include="Entity\Xinshui.cs" />
+    <Compile Include="Entity\Yuce310.cs" />
+    <Compile Include="Entity\Yuceanalysis.cs" />
+    <Compile Include="Entity\Kaijianglanqiu.cs" />
+    <Compile Include="Entity\Yucelanqiu.cs" />
+    <Compile Include="Entity\Yucerawdata.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\NVCExtender.cs" />
+    <Compile Include="Helper\SQLHelper.cs" />
+    <Compile Include="Helper\StackOverflow_7003740.cs" />
+    <Compile Include="ImportDataFromUrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportDataFromUrlForm.Designer.cs">
+      <DependentUpon>ImportDataFromUrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDataTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportDataTestForm.Designer.cs">
+      <DependentUpon>ImportDataTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShishicaiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShishicaiForm.Designer.cs">
+      <DependentUpon>ShishicaiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaocanTouzhuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaocanTouzhuForm.Designer.cs">
+      <DependentUpon>TaocanTouzhuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TouzhuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouzhuForm.Designer.cs">
+      <DependentUpon>TouzhuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinshuituijianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XinshuituijianForm.Designer.cs">
+      <DependentUpon>XinshuituijianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinshuituijiangaopeiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XinshuituijiangaopeiForm.Designer.cs">
+      <DependentUpon>XinshuituijiangaopeiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuceDataAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuceDataAnalysisForm.Designer.cs">
+      <DependentUpon>YuceDataAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YucePeilvAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YucePeilvAnalysisForm.Designer.cs">
+      <DependentUpon>YucePeilvAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuceStaticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuceStaticsForm.Designer.cs">
+      <DependentUpon>YuceStaticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuceTouzhuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuceTouzhuForm.Designer.cs">
+      <DependentUpon>YuceTouzhuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongjiangchaxunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhongjiangchaxunForm.Designer.cs">
+      <DependentUpon>ZhongjiangchaxunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZnewForms\KaijiangPeilvStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZnewForms\KaijiangPeilvStats.Designer.cs">
+      <DependentUpon>KaijiangPeilvStats.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="0630\ActualBuyForm.resx">
+      <DependentUpon>ActualBuyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\BackTestingForm.resx">
+      <DependentUpon>BackTestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\DataAnalysisForm.resx">
+      <DependentUpon>DataAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\DataPeilvAnalysisForm.resx">
+      <DependentUpon>DataPeilvAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\DataStaticsForm.resx">
+      <DependentUpon>DataStaticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\DataVisualizationForm.resx">
+      <DependentUpon>DataVisualizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\MainControlForm.resx">
+      <DependentUpon>MainControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\MatchSuggestForm.resx">
+      <DependentUpon>MatchSuggestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0630\TouzhuForm.resx">
+      <DependentUpon>TouzhuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1211\ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbountForm.resx">
+      <DependentUpon>AbountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountStaticsForm.resx">
+      <DependentUpon>AccountStaticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppYuceForm.resx">
+      <DependentUpon>AppYuceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaketBallYuce.resx">
+      <DependentUpon>BaketBallYuce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanChangAnalysis.resx">
+      <DependentUpon>DanChangAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanchangCelveForm.resx">
+      <DependentUpon>DanchangCelveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanchangTouzhuForm.resx">
+      <DependentUpon>DanchangTouzhuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAnalysisForm.resx">
+      <DependentUpon>DataAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataValidateForm.resx">
+      <DependentUpon>DataValidateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDataFromUrlForm.resx">
+      <DependentUpon>ImportDataFromUrlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDataTestForm.resx">
+      <DependentUpon>ImportDataTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShishicaiForm.resx">
+      <DependentUpon>ShishicaiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaocanTouzhuForm.resx">
+      <DependentUpon>TaocanTouzhuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouzhuForm.resx">
+      <DependentUpon>TouzhuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XinshuituijianForm.resx">
+      <DependentUpon>XinshuituijianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XinshuituijiangaopeiForm.resx">
+      <DependentUpon>XinshuituijiangaopeiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuceDataAnalysisForm.resx">
+      <DependentUpon>YuceDataAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YucePeilvAnalysisForm.resx">
+      <DependentUpon>YucePeilvAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuceStaticsForm.resx">
+      <DependentUpon>YuceStaticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuceTouzhuForm.resx">
+      <DependentUpon>YuceTouzhuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhongjiangchaxunForm.resx">
+      <DependentUpon>ZhongjiangchaxunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZnewForms\KaijiangPeilvStats.resx">
+      <DependentUpon>KaijiangPeilvStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="html\0630\cpzx.html" />
+    <Content Include="html\0630\一定牛足球预测主页.html" />
+    <Content Include="html\310lanqiu\310lanqiu.html" />
+    <Content Include="html\310lanqiu\310lanqiu2.html" />
+    <Content Include="html\310lanqiu\310lanqiurqresult.html" />
+    <Content Include="html\appyuce\20141208detail.html" />
+    <Content Include="html\appyuce\20141208Total.html" />
+    <Content Include="html\test\HTMLPage1.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\HTMLPage2.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\HTMLPage3.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\HTMLPage4.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\lanqiuyuce\lanqiudetails.html" />
+    <Content Include="html\lanqiuyuce\lanqiutotal.html" />
+    <Content Include="html\lanqiu\lanqiu20141211.html" />
+    <Content Include="html\test\开奖结果全0805.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\彩客咨询明细.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\彩客咨询明细3.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\彩客咨询明细4.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\彩客咨询目录.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\彩客咨询明细2.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\心水推荐.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\积分榜日职联.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\赔率20140816.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\赔率20140829.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="thirdparty\ZedGraph.dll" />
+    <Content Include="thirdparty\ZedGraph.Web.dll" />
+    <None Include="Resources\IMG_1965.jpg" />
+    <Content Include="thirdparty\HtmlAgilityPack.dll" />
+    <Content Include="html\test\日职乙.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\test\积分榜日职乙.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="thirdparty\Newtonsoft.Json.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="html\kaijiang\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
