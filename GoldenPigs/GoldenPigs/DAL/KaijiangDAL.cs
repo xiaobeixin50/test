@@ -481,5 +481,21 @@ or kedui = ?kedui )";
 
         }
 
+        public DataTable GetKaijiangDateYuce1(string riqi)
+        {
+            string sqltemp = "select riqi, bianhao, rqshu ,zhudui,kedui, shengsp,pingsp ,fusp ,rqshengsp,rqpingsp,rqfusp,spfresult, rqspfresult from kaijiang where pingsp < fusp and shengsp < 1.6 and riqi = '{0}' ;";
+            string sql = String.Format(sqltemp, riqi);
+
+            return SQLHelper.GetDataTable(sql);
+
+        }
+        public DataTable GetKaijiangDateYuce2(string riqi)
+        {
+            string sqltemp = "select riqi, bianhao,rqshu, zhudui,kedui, shengsp,pingsp ,fusp ,rqshengsp,rqpingsp,rqfusp, spfresult,rqspfresult from kaijiang where rqfusp < 1.6 and riqi = '{0}';";
+            string sql = String.Format(sqltemp, riqi);
+
+            return SQLHelper.GetDataTable(sql);
+
+        }
     }
 }

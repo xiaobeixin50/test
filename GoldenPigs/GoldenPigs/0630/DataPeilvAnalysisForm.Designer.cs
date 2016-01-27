@@ -33,6 +33,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
+            this.txtYangben = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeilvAnalysis)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,11 +85,30 @@
             this.lblResult.TabIndex = 4;
             this.lblResult.Text = "预测结果：";
             // 
+            // txtYangben
+            // 
+            this.txtYangben.Location = new System.Drawing.Point(628, 42);
+            this.txtYangben.Name = "txtYangben";
+            this.txtYangben.Size = new System.Drawing.Size(100, 21);
+            this.txtYangben.TabIndex = 5;
+            this.txtYangben.Text = "50";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(516, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "样本数量不小于";
+            // 
             // DataPeilvAnalysisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 480);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtYangben);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
@@ -108,5 +129,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.TextBox txtYangben;
+        private System.Windows.Forms.Label label2;
     }
 }

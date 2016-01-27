@@ -66,6 +66,7 @@
             this.btnGailvFenxiRq = new System.Windows.Forms.Button();
             this.btnImportPeilv = new System.Windows.Forms.Button();
             this.btnImportPaiming = new System.Windows.Forms.Button();
+            this.btnDoubleAnalysis = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -377,7 +378,7 @@
             // 
             // btnGailvFenxiRq
             // 
-            this.btnGailvFenxiRq.Location = new System.Drawing.Point(331, 263);
+            this.btnGailvFenxiRq.Location = new System.Drawing.Point(331, 244);
             this.btnGailvFenxiRq.Name = "btnGailvFenxiRq";
             this.btnGailvFenxiRq.Size = new System.Drawing.Size(147, 23);
             this.btnGailvFenxiRq.TabIndex = 47;
@@ -405,11 +406,22 @@
             this.btnImportPaiming.UseVisualStyleBackColor = true;
             this.btnImportPaiming.Click += new System.EventHandler(this.btnImportPaiming_Click);
             // 
+            // btnDoubleAnalysis
+            // 
+            this.btnDoubleAnalysis.Location = new System.Drawing.Point(331, 286);
+            this.btnDoubleAnalysis.Name = "btnDoubleAnalysis";
+            this.btnDoubleAnalysis.Size = new System.Drawing.Size(147, 23);
+            this.btnDoubleAnalysis.TabIndex = 50;
+            this.btnDoubleAnalysis.Text = "单场双概率分析";
+            this.btnDoubleAnalysis.UseVisualStyleBackColor = true;
+            this.btnDoubleAnalysis.Click += new System.EventHandler(this.btnDoubleAnalysis_Click);
+            // 
             // MainControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 452);
+            this.Controls.Add(this.btnDoubleAnalysis);
             this.Controls.Add(this.btnImportPaiming);
             this.Controls.Add(this.btnImportPeilv);
             this.Controls.Add(this.btnGailvFenxiRq);
@@ -484,5 +496,6 @@
         private System.Windows.Forms.Button btnImportPeilv;
         private System.Windows.Forms.ToolStripMenuItem 账户总览ToolStripMenuItem;
         private System.Windows.Forms.Button btnImportPaiming;
+        private System.Windows.Forms.Button btnDoubleAnalysis;
     }
 }

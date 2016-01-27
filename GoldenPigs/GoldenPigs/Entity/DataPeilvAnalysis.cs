@@ -39,7 +39,16 @@ namespace GoldenPigs.Entity
         public int rqpingspfracint { get; set; }
         public int rqfuspfracint { get; set; }
 
+        //胜平负结果的概率排行
+        public int spfgailvrank { get; set; }
+        public int rqspfgailvrank { get; set; }
 
+        //最近一场比赛的胜平负结果概率排行
+        public int lastspfgailvrank { get; set; }
+        public int lastrqspfgailvrank { get; set; }
+
+        public int lastspf { get; set; }
+        public int lastrqspf { get; set; }
         
     }
 }

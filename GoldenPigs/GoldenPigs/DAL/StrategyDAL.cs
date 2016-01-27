@@ -101,6 +101,20 @@ order by riqi ;";
             String sql = @"select rqspfresult,count(*) from kaijiang where rqshengspfracint =" + rqshengspfracint + " and rqpingspfracint = " + rqpingspfracint + " and rqfuspfracint = " + rqfuspfracint + " and riqi < '" + riqi + "' group by rqspfresult" ;
             return binding(sql, "peilvanalysis");
         }
+
+        //获取最近一场spf的比赛
+        public static DataTable GetLastSpfData(int shengspfracint, int pingspfracint, int fuspfracint, string riqi)
+        {
+            String sql = @"select *  from kaijiang where shengspfracint =" + shengspfracint + " and pingspfracint = " + pingspfracint + " and fuspfracint = " + fuspfracint + " and riqi < '" + riqi + "' order by riqi desc, bianhao desc";
+            return binding(sql, "peilvanalysis");
+        }
+
+        //获取最近一场rqspf的比赛
+        public static DataTable GetLastRqSpfData(int shengspfracint, int pingspfracint, int fuspfracint, string riqi)
+        {
+            String sql = @"select *  from kaijiang where rqshengspfracint =" + shengspfracint + " and rqpingspfracint = " + pingspfracint + " and rqfuspfracint = " + fuspfracint + " and riqi < '" + riqi + "' order by riqi desc, bianhao desc";
+            return binding(sql, "peilvanalysis");
+        }
         //helper method
         static DataTable binding(string sqlsel, string tablename)
         {

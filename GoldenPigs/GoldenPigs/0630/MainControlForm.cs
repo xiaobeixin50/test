@@ -2675,5 +2675,61 @@ namespace GoldenPigs._0630
             return string.Format(urlTemp, importDate);
         }
 
+        private void btnDoubleAnalysis_Click(object sender, EventArgs e)
+        {
+
+            //单场概率分析，分析连续多少天没有出现某个排名，以天为单位，同时分析两个
+
+            Dictionary<int, int> maxTimes = new Dictionary<int, int>();
+            maxTimes.Add(0, 0);
+            maxTimes.Add(1, 0);
+            maxTimes.Add(2, 0);
+            maxTimes.Add(3, 0);
+
+
+            DataTable dtData = new SoccerSingleDAL().GetAllSingle();
+            int continueTimes = 0;
+            //这里只搜索3的未出现最大天数
+            int lastSpfPaiming = 1;
+            int currentSpfPaiming = 0;
+            int currentRqSpfPaiming = 0;
+            string maxRiqi = "";
+            string currentRiqi = "";
+            foreach (DataRow row in dtData.Rows)
+            {
+                currentSpfPaiming = Convert.ToInt32(row["spfpaiming"]);
+                currentRqSpfPaiming = Convert.ToInt32(row["rqspfpaiming"]);
+                currentRiqi = row["riqi"].ToString();
+
+                //如果这一天的排名都不是3
+                if (currentSpfPaiming != lastSpfPaiming && currentRqSpfPaiming != lastSpfPaiming)
+                {
+                    continueTimes++;
+
+                    int currentMaxTimes = maxTimes[lastSpfPaiming];
+                    if (currentMaxTimes < continueTimes)
+                    {
+                        maxTimes[lastSpfPaiming] = continueTimes;
+                        maxRiqi = currentRiqi;
+                    }
+
+                    //lastSpfPaiming = currentSpfPaiming;
+                    //continueTimes = 1;
+                }
+                else
+                {
+                    continueTimes = 0;
+                }
+            }
+
+            StringBuilder sb = new StringBuilder();
+            foreach (KeyValuePair<int, int> kv in maxTimes)
+            {
+                sb.Append(kv.Key).Append(":").Append(kv.Value).AppendLine();
+            }
+            sb.AppendLine(maxRiqi);
+            MessageBox.Show(sb.ToString());
+        }
+
     }
 }
